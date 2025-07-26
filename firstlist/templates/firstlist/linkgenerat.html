@@ -1,0 +1,82 @@
+<div style="width: 1440px; height: 1024.00px; background-color: rgba(255, 255, 255, 1.00); padding: 0px 0px 0px 0px">
+   <div style="width: 1440px; height: 662.00px; padding: 0px 0px 0px 0px; position: absolute; top: 182px; left: 0px">
+     <div style="width: 1440px; height: 280.00px; background-color: rgba(78, 198, 138, 1.00); padding: 0px 0px 0px 0px; position: absolute; top: 0px; left: 0px"> </div>
+     <div style="width: 961px; height: 91.00px; color: rgba(255, 255, 255, 1.00); font-family: Arial; font-weight: 700; padding: 0px 0px 0px 0px; position: absolute; top: 49px; left: 80px; text-align: center; font-size: 32px"> Put your link</div>
+   </div>
+</div>
+<div class="buttons-container">
+
+
+
+    <div>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <textarea name="original_link" placeholder="Insert the link" required style="resize: none; width: 1069px; height: 81.00px; background-color: rgba(217, 217, 217, 1.00); padding: 10px; font-size: 32px; position: absolute; top: 338px; left: 24px; border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px"></textarea>
+    <button type="submit" class="custom-btn" id="createBtn">
+        <span class="btn-text">Create link</span>
+    </button>
+    </form>
+    </div>
+</div>
+
+<style>
+
+
+    .custom-btn {
+        width: 283px;
+        height: 81px;
+        background-color: #d9d9d9;
+        border: none;
+        border-radius: 53px;
+        position: relative;
+        margin: 15px 0;
+        cursor: pointer;
+        display: block;
+        padding: 0;
+        transition: all 0.3s ease;
+    }
+
+    .btn-text {
+        color: #000;
+        font-family: Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 220px;
+        text-align: center;
+    }
+
+
+    #copyBtn {
+        position: absolute;
+        top: 663px;
+        left: 1112px;
+    }
+
+    #createBtn {
+        position: absolute;
+        top: 338px;
+        left: 1112px;
+    }
+
+
+    .custom-btn:hover {
+        background-color: #c0c0c0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .custom-btn:active {
+        transform: scale(0.98);
+    }
+</style>
+
+<script>
+
+    document.getElementById('copyBtn').addEventListener('click', function() {
+
+        alert('Link copied!');
+    });
+</script>
